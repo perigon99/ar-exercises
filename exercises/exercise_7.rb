@@ -10,3 +10,10 @@ puts "Exercise 7"
 puts "----------"
 
 # Your code goes here ...
+puts "Enter store name" 
+input = STDIN.gets.chomp
+
+test = Store.create(
+name: input,
+)
+test.errors.full_messages.each { |error| puts error}
